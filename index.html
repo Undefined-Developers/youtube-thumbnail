@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Thumbnail Fetcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Thumbnail Fetcher</h1>
+        
+        <div class="input-group">
+            <input type="text" id="video-url" placeholder="Paste YouTube video URL here..." />
+            <button id="fetch-btn">Fetch Thumbnail</button>
+        </div>
+        
+        <div id="error-message" class="error"></div>
+        
+        <div class="result" id="result">
+            <div class="thumbnail-container" id="thumbnail-container" style="display: none;">
+                <h2 id="video-title"></h2>
+                <div class="quality-options">
+                    <button class="quality-btn active" data-quality="maxresdefault">HD</button>
+                    <button class="quality-btn" data-quality="sddefault">SD</button>
+                    <button class="quality-btn" data-quality="mqdefault">Medium</button>
+                    <button class="quality-btn" data-quality="default">Low</button>
+                </div>
+                <div style="margin-top: 20px;">
+                    <img id="thumbnail" class="thumbnail" alt="YouTube Thumbnail" />
+                </div>
+                <div style="margin-top: 15px;">
+                    <button id="download-btn" class="download-btn">Download Thumbnail</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>How to use:</h3>
+            <ol>
+                <li>Paste a YouTube video URL in the input field above</li>
+                <li>Click "Fetch Thumbnail" to retrieve the thumbnail</li>
+                <li>Select your preferred quality</li>
+                <li>Click "Download Thumbnail" to save the image</li>
+            </ol>
+            <p>Supported URL formats:</p>
+            <ul>
+                <li>https://www.youtube.com/watch?v=VIDEO_ID</li>
+                <li>https://youtu.be/VIDEO_ID</li>
+                <li>https://youtube.com/shorts/VIDEO_ID</li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>Powered by <a href="https://stuffmaker.net" target="_blank">Mr Stuffmaker</a> | &copy; <span id="current-year"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
